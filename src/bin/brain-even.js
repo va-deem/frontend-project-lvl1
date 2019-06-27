@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { name, greet, askQuestions } from '..';
+import { gameEngine } from '..';
+import askQuestions from '../games/even';
 
 console.log('Answer "yes" if number even otherwise answer "no".');
-greet(name);
-askQuestions();
+gameEngine(askQuestions);
