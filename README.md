@@ -4,4 +4,4 @@ Asciinema records:<br>
 <a href="https://asciinema.org/a/mygnkP8NjJdG5ymWMJFS5RYYs">Game "brain-even" (step5)</a><br>
 <a href="https://asciinema.org/a/CYtCvs8fXMqxWKHsddNLXScY7">Game "brain-calc" (step6)</a><br>
 <a href="https://asciinema.org/a/7GdXG17qeagDN9WvllAZ2Oi0O">Game "brain-gcd" (step7)</a><br>
-<a href="https://asciinema.org/a/tMpSVfIk4cGfBKsF6FxfJPKH">Game "brain-progression" (step8)</a>
+<a href="https://asciinema.org/a/tMpSVfIk4cGfBKsF6FxfJPKHS">Game "brain-progression" (step8)</a>
