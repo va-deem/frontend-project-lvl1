@@ -23,6 +23,11 @@
     "type": "git",
     "url": "git+https://github.com/vad-s/frontend-project-lvl1.git"
   },
+    "keywords": [
+    "brain-games",
+    "javascript practice",
+    "hexlet"
+  ],
   "author": "Vadim S",
   "license": "ISC",
   "devDependencies": {
