@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import { name } from '..';
 
+console.log('What is the result of the expression?');
 const askQuestions = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 

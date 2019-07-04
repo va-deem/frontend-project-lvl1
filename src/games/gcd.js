@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import { name } from '..';
 
+console.log('Find the greatest common divisor of given numbers.');
 const askQuestions = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const random1 = getRandomInt(1, 21);

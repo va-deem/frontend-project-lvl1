@@ -5,6 +5,7 @@ then it is safe to disable this rule." */
 import readlineSync from 'readline-sync';
 import { name } from '..';
 
+console.log('Answer "yes" if number even otherwise answer "no".');
 const askQuestions = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const isEven = int => int % 2 === 0;

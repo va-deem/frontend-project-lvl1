@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import { name } from '..';
 
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const askQuestions = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const random = getRandomInt(2, 300);

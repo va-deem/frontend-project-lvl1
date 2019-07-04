@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import { name } from '..';
 
+console.log('What number is missing in the progression?');
 const askQuestions = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const randomStart = getRandomInt(1, 100);
