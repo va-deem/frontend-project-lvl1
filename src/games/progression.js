@@ -8,21 +8,21 @@ const askQuestions = () => {
   const randomNumber = getRandomInt(1, 9);
 
   const randomSequence = () => {
-    let numberInSequence = randomStart;
+    let element = randomStart;
     let i = 0;
     let sequence = '';
-    let missedNumber = 0;
+    let missedElement = 0;
     while (i < 10) {
-      numberInSequence += randomStep;
+      element += randomStep;
       if (i === randomNumber) {
         sequence += '.. ';
-        missedNumber = numberInSequence;
+        missedElement = element;
       } else {
-        sequence += `${numberInSequence} `;
+        sequence += `${element} `;
       }
       i += 1;
     }
-    return [sequence, missedNumber];
+    return [sequence, missedElement];
   };
 
   const sequence = randomSequence();

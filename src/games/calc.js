@@ -9,15 +9,15 @@ const askQuestions = () => {
   const operatorChoice = getRandomInt(0, 3);
 
   const randomExpression = () => {
-    let resArray = [];
+    let output = [];
     if (operatorChoice === 0) {
-      resArray = [`${firstOperand} - ${secondOperand}`, firstOperand - secondOperand];
+      output = [`${firstOperand} - ${secondOperand}`, firstOperand - secondOperand];
     } else if (operatorChoice === 1) {
-      resArray = [`${firstOperand} + ${secondOperand}`, firstOperand + secondOperand];
+      output = [`${firstOperand} + ${secondOperand}`, firstOperand + secondOperand];
     } else {
-      resArray = [`${firstOperand} * ${secondOperand}`, firstOperand * secondOperand];
+      output = [`${firstOperand} * ${secondOperand}`, firstOperand * secondOperand];
     }
-    return resArray;
+    return output;
   };
 
   const expression = (randomExpression());
