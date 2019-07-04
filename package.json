@@ -2,7 +2,6 @@
   "name": "first",
   "version": "1.8.0",
   "description": "First project on Hexlet",
-  "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
@@ -23,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/vad-s/frontend-project-lvl1.git"
   },
-    "keywords": [
+  "keywords": [
     "brain-games",
     "javascript practice",
     "hexlet"
