@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import { name } from '..';
+import gameEngine from '..';
 
 console.log('Find the greatest common divisor of given numbers.');
 const askQuestions = () => {
@@ -12,18 +11,11 @@ const askQuestions = () => {
     }
     return findGcd(b, a % b);
   };
-
   const gcd = findGcd(random1, random2);
-  const answer = readlineSync.question(`Question: ${random1} ${random2}\nYour answer:`);
-  let result = '';
-  if (Number(answer) === gcd) {
-    console.log('Correct!');
-    result = true;
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was ${gcd}. \nLet's try again, ${name}!`);
-    result = false;
-  }
-  return result;
+
+  return [`${random1} ${random2}`, String(gcd)];
 };
+
+gameEngine(askQuestions);
 
 export default askQuestions;
