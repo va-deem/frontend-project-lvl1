@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import askQuestions from '../games/prime';
+import startGame from '../games/prime';
 
-askQuestions();
+startGame();

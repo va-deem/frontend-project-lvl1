@@ -1,7 +1,7 @@
 import gameEngine from '..';
 
 console.log('What is the result of the expression?');
-const askQuestions = () => {
+const startGame = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const firstOperand = getRandomInt(1, 10);
   const secondOperand = getRandomInt(1, 10);
@@ -18,6 +18,6 @@ const askQuestions = () => {
   return output;
 };
 
-gameEngine(askQuestions);
+gameEngine(startGame);
 
-export default askQuestions;
+export default startGame;

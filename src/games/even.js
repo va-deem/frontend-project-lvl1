@@ -1,7 +1,7 @@
 import gameEngine from '..';
 
 console.log('Answer "yes" if number even otherwise answer "no".');
-const askQuestions = () => {
+const startGame = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const isEven = int => int % 2 === 0;
   const number = getRandomInt(1, 1000);
@@ -15,6 +15,6 @@ const askQuestions = () => {
   return output;
 };
 
-gameEngine(askQuestions);
+gameEngine(startGame);
 
-export default askQuestions;
+export default startGame;

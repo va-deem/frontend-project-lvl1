@@ -1,7 +1,7 @@
 import gameEngine from '..';
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-const askQuestions = () => {
+const startGame = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const random = getRandomInt(2, 100);
 
@@ -27,6 +27,6 @@ const askQuestions = () => {
   return output;
 };
 
-gameEngine(askQuestions);
+gameEngine(startGame);
 
-export default askQuestions;
+export default startGame;

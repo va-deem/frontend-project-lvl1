@@ -1,7 +1,7 @@
 import gameEngine from '..';
 
 console.log('Find the greatest common divisor of given numbers.');
-const askQuestions = () => {
+const startGame = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const random1 = getRandomInt(1, 21);
   const random2 = getRandomInt(1, 21);
@@ -16,6 +16,6 @@ const askQuestions = () => {
   return [`${random1} ${random2}`, String(gcd)];
 };
 
-gameEngine(askQuestions);
+gameEngine(startGame);
 
-export default askQuestions;
+export default startGame;

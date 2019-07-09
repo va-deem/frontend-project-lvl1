@@ -1,7 +1,7 @@
 import gameEngine from '..';
 
 console.log('What number is missing in the progression?');
-const askQuestions = () => {
+const startGame = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   const randomStart = getRandomInt(1, 100);
   const randomStep = getRandomInt(3, 7);
@@ -25,6 +25,6 @@ const askQuestions = () => {
   return [sequence, String(missedElement)];
 };
 
-gameEngine(askQuestions);
+gameEngine(startGame);
 
-export default askQuestions;
+export default startGame;
