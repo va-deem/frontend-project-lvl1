@@ -1,10 +1,10 @@
 import gameEngine from '..';
+import getRandomNumber from '../generator';
 
 console.log('Find the greatest common divisor of given numbers.');
 const startGame = () => {
-  const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const random1 = getRandomInt(1, 21);
-  const random2 = getRandomInt(1, 21);
+  const random1 = getRandomNumber(1, 21);
+  const random2 = getRandomNumber(1, 21);
   const findGcd = (a, b) => {
     if (b === 0) {
       return a;

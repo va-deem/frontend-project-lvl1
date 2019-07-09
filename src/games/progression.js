@@ -1,11 +1,11 @@
 import gameEngine from '..';
+import getRandomNumber from '../generator';
 
 console.log('What number is missing in the progression?');
 const startGame = () => {
-  const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const randomStart = getRandomInt(1, 100);
-  const randomStep = getRandomInt(3, 7);
-  const randomNumber = getRandomInt(1, 9);
+  const randomStart = getRandomNumber(1, 100);
+  const randomStep = getRandomNumber(3, 7);
+  const randomNumber = getRandomNumber(1, 9);
   const progressionLength = 10;
 
   let element = randomStart;

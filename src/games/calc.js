@@ -1,11 +1,11 @@
 import gameEngine from '..';
+import getRandomNumber from '../generator';
 
 console.log('What is the result of the expression?');
 const startGame = () => {
-  const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const firstOperand = getRandomInt(1, 10);
-  const secondOperand = getRandomInt(1, 10);
-  const operatorChoice = getRandomInt(0, 3);
+  const firstOperand = getRandomNumber(1, 10);
+  const secondOperand = getRandomNumber(1, 10);
+  const operatorChoice = getRandomNumber(0, 3);
 
   let output = [];
   if (operatorChoice === 0) {

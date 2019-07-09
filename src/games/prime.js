@@ -1,9 +1,9 @@
 import gameEngine from '..';
+import getRandomNumber from '../generator';
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const startGame = () => {
-  const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  const random = getRandomInt(2, 100);
+  const random = getRandomNumber(2, 100);
 
   const isPrime = (number) => {
     if (number < 2) {
