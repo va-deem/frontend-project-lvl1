@@ -6,9 +6,10 @@ console.log(`Hello, ${name}!`);
 
 const gameEngine = (func) => {
   const check = () => {
-    const gameData = func();
-    const question = gameData[0];
-    const correctAnswer = gameData[1];
+    // const gameData = func();
+    // const question = gameData[0];
+    // const correctAnswer = gameData[1];
+    const [question, correctAnswer] = func();
     const answer = readlineSync.question(`Question: ${question}\nYour answer:`);
     let result = '';
     if (answer === correctAnswer) {
@@ -22,12 +23,13 @@ const gameEngine = (func) => {
   };
 
   let answersCount = 0;
+  const attemptsNumber = 3;
   for (let i = 0; i < 3; i += 1) {
     if (check()) {
       answersCount += 1;
     } else break;
   }
-  if (answersCount === 3) {
+  if (answersCount === attemptsNumber) {
     console.log(`Congratulations, ${name}!`);
   }
 };

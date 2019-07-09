@@ -3,14 +3,14 @@ import getRandomNumber from '../generator';
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const startGame = () => {
-  const random = getRandomNumber(2, 100);
+  const question = getRandomNumber(2, 100);
 
   const isPrime = (number) => {
     if (number < 2) {
       return false;
     }
 
-    for (let i = 2; i < number; i += 1) {
+    for (let i = 2; i < (number / 2); i += 1) {
       if (number % i === 0) {
         return false;
       }
@@ -18,13 +18,13 @@ const startGame = () => {
     return true;
   };
 
-  let output = [];
-  if (isPrime(random)) {
-    output = [`${random}`, 'yes'];
+  let output = '';
+  if (isPrime(question)) {
+    output = 'yes';
   } else {
-    output = [`${random}`, 'no'];
+    output = 'no';
   }
-  return output;
+  return [`${question}`, output];
 };
 
 gameEngine(startGame);

@@ -2,20 +2,22 @@ import gameEngine from '..';
 import getRandomNumber from '../generator';
 
 console.log('What is the result of the expression?');
-const startGame = () => {
+const startGame = () => {  
   const firstOperand = getRandomNumber(1, 10);
   const secondOperand = getRandomNumber(1, 10);
-  const operatorChoice = getRandomNumber(0, 3);
+  const operatorsCount = 3;
+  const operatorChoice = getRandomNumber(0, operatorsCount);
 
-  let output = [];
-  if (operatorChoice === 0) {
-    output = [`${firstOperand} - ${secondOperand}`, String(firstOperand - secondOperand)];
-  } else if (operatorChoice === 1) {
-    output = [`${firstOperand} + ${secondOperand}`, String(firstOperand + secondOperand)];
-  } else {
-    output = [`${firstOperand} * ${secondOperand}`, String(firstOperand * secondOperand)];
+  switch (operatorChoice) {
+    case 0:
+      return [`${firstOperand} - ${secondOperand}`, String(firstOperand - secondOperand)];
+    case 1:
+      return [`${firstOperand} + ${secondOperand}`, String(firstOperand + secondOperand)];
+    case 2:
+      return [`${firstOperand} * ${secondOperand}`, String(firstOperand * secondOperand)];
+    default:
+      return [];
   }
-  return output;
 };
 
 gameEngine(startGame);

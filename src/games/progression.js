@@ -15,10 +15,10 @@ const startGame = () => {
   while (i < progressionLength) {
     element += randomStep;
     if (i === randomNumber) {
-      sequence += '.. ';
+      sequence = `${sequence} ..`;
       missedElement = element;
     } else {
-      sequence += `${element} `;
+      sequence = `${sequence} ${element}`;
     }
     i += 1;
   }
