@@ -1,8 +1,8 @@
 import gameEngine from '..';
 import getRandomNumber from '../generator';
 
-console.log('What is the result of the expression?');
-const startGame = () => {  
+const gameCondition = 'What is the result of the expression?';
+const startGame = () => {
   const firstOperand = getRandomNumber(1, 10);
   const secondOperand = getRandomNumber(1, 10);
   const operatorsCount = 3;
@@ -20,6 +20,6 @@ const startGame = () => {
   }
 };
 
-gameEngine(startGame);
+gameEngine(gameCondition, startGame);
 
 export default startGame;

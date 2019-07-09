@@ -4,11 +4,9 @@ console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 
-const gameEngine = (func) => {
+const gameEngine = (condition, func) => {
+  console.log(condition);
   const check = () => {
-    // const gameData = func();
-    // const question = gameData[0];
-    // const correctAnswer = gameData[1];
     const [question, correctAnswer] = func();
     const answer = readlineSync.question(`Question: ${question}\nYour answer:`);
     let result = '';
