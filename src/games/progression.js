@@ -11,18 +11,18 @@ const startGame = () => {
   let element = randomStart;
   let i = 0;
   let sequence = '';
-  let missedElement = 0;
+  let missingElement = 0;
   while (i < progressionLength) {
     element += randomStep;
     if (i === randomNumber) {
       sequence = `${sequence} ..`;
-      missedElement = element;
+      missingElement = element;
     } else {
       sequence = `${sequence} ${element}`;
     }
     i += 1;
   }
-  return [sequence, String(missedElement)];
+  return [sequence, String(missingElement)];
 };
 
 gameEngine(gameCondition, startGame);
