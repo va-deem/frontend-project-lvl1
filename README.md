@@ -2,7 +2,7 @@
 
 This is my first project in JavaScript and first practical task in Hexlet JS course. It consists of 5 console games where user enters the answer for proposed question and the script is checking it and dispays the results.
 
-Это мой первый проект на JavaScript и первое практическое задание на профессии JS разработчик на Хекслете. Проект состоит из 5 консольных игр, где пользователь вводит ответ на предложенный вопрос, а скрипт проверяет его и выводит результат. 
+Это мой первый проект на JavaScript и первое практическое задание на профессии Фронтенд JavaScript на Хекслете. Проект состоит из 5 консольных игр, где пользователь вводит ответ на предложенный вопрос, а скрипт проверяет его и выводит результат. 
 
 ## Setup
 
@@ -20,6 +20,7 @@ $ brain-prime
 $ brain-progression
 
 ```
+Demo:
 ![Demo](/images/brain-progression.gif?raw=true "Demo example")
 
 Asciinema records:<br>
