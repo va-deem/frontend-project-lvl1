@@ -20,8 +20,11 @@ $ brain-prime
 $ brain-progression
 
 ```
+![Alt text](/images/brain-progression.jpg?raw=true "Demo example")![Alt text](/images/brain-progression.jpg?raw=true "Demo example")
 
 Asciinema records:<br>
-<a href="https://asciinema.org/a/mygnkP8NjJdG5ymWMJFS5RYYs" target="_blank"><img src="https://asciinema.org/a/mygnkP8NjJdG5ymWMJFS5RYYs.svg" /></a><br>
-
-<a href="https://asciinema.org/a/mygnkP8NjJdG5ymWMJFS5RYYs" target="_blank"><img src="https://asciinema.org/a/mygnkP8NjJdG5ymWMJFS5RYYs.svg" /></a>
+<a href="https://asciinema.org/a/mygnkP8NjJdG5ymWMJFS5RYYs">Game "brain-even" (step5)</a><br>
+<a href="https://asciinema.org/a/CYtCvs8fXMqxWKHsddNLXScY7">Game "brain-calc" (step6)</a><br>
+<a href="https://asciinema.org/a/7GdXG17qeagDN9WvllAZ2Oi0O">Game "brain-gcd" (step7)</a><br>
+<a href="https://asciinema.org/a/tMpSVfIk4cGfBKsF6FxfJPKHS">Game "brain-progression" (step8)</a><br>
+<a href="https://asciinema.org/a/cvasb4SSUU1uP37tO6pCqPlAY">Game "brain-prime" (step9)</a>
