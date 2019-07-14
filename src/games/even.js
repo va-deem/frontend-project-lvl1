@@ -6,7 +6,7 @@ const isEven = int => int % 2 === 0;
 const startGame = () => {
   const question = getRandomNumber(1, 1000);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
-  return [`${question}`, correctAnswer];
+  return [question, correctAnswer];
 };
 
 gameEngine(gameCondition, startGame);

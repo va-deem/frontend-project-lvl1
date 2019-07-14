@@ -18,13 +18,8 @@ const startGame = () => {
     return true;
   };
 
-  let output = '';
-  if (isPrime(question)) {
-    output = 'yes';
-  } else {
-    output = 'no';
-  }
-  return [`${question}`, output];
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
 gameEngine(gameCondition, startGame);
