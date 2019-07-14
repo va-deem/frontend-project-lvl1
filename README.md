@@ -20,7 +20,7 @@ $ brain-prime
 $ brain-progression
 
 ```
-![Alt text](/images/brain-progression.jpg?raw=true "Demo example")![Alt text](/images/brain-progression.jpg?raw=true "Demo example")
+![Demo](/relative/path/to/img.jpg?raw=true "Demo example")
 
 Asciinema records:<br>
 <a href="https://asciinema.org/a/mygnkP8NjJdG5ymWMJFS5RYYs">Game "brain-even" (step5)</a><br>
