@@ -5,22 +5,20 @@ const gameCondition = 'What number is missing in the progression?';
 const startGame = () => {
   const randomStart = getRandomNumber(1, 100);
   const randomStep = getRandomNumber(3, 7);
-  const randomNumber = getRandomNumber(1, 9);
   const progressionLength = 10;
+  const randomElement = getRandomNumber(1, progressionLength - 1);
 
   let element = randomStart;
-  let i = 0;
   let sequence = '';
   let missingElement = 0;
-  while (i < progressionLength) {
-    element += randomStep;
-    if (i === randomNumber) {
+  for (let i = 0; i < progressionLength; i += 1) {
+    element = randomStart + randomStep * i;
+    if (i === randomElement) {
       sequence = `${sequence} ..`;
       missingElement = element;
     } else {
       sequence = `${sequence} ${element}`;
     }
-    i += 1;
   }
   return [sequence, String(missingElement)];
 };
