@@ -15,12 +15,10 @@ const isPrime = (number) => {
   return true;
 };
 
-const startGame = () => {
+const initGame = () => {
   const question = getRandomNumber(2, 100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-gameEngine(gameCondition, startGame);
-
-export default startGame;
+export default () => gameEngine(gameCondition, initGame);

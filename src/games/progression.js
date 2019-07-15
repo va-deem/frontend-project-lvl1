@@ -2,7 +2,7 @@ import gameEngine from '..';
 import getRandomNumber from '../generator';
 
 const gameCondition = 'What number is missing in the progression?';
-const startGame = () => {
+const initGame = () => {
   const randomStart = getRandomNumber(1, 100);
   const randomStep = getRandomNumber(3, 7);
   const progressionLength = 10;
@@ -23,6 +23,4 @@ const startGame = () => {
   return [sequence, String(missingElement)];
 };
 
-gameEngine(gameCondition, startGame);
-
-export default startGame;
+export default () => gameEngine(gameCondition, initGame);

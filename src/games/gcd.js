@@ -9,15 +9,13 @@ const findGcd = (a, b) => {
   return findGcd(b, a % b);
 };
 
-const startGame = () => {
-  const random1 = getRandomNumber(1, 21);
-  const random2 = getRandomNumber(1, 21);
+const initGame = () => {
+  const random1 = getRandomNumber(1, 20);
+  const random2 = getRandomNumber(1, 20);
 
   const gcd = findGcd(random1, random2);
 
   return [`${random1} ${random2}`, String(gcd)];
 };
 
-gameEngine(gameCondition, startGame);
-
-export default startGame;
+export default () => gameEngine(gameCondition, initGame);
