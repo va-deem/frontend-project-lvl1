@@ -13,9 +13,9 @@ const generateGame = () => {
   const random1 = getRandomNumber(1, 20);
   const random2 = getRandomNumber(1, 20);
 
-  const gcd = findGcd(random1, random2);
+  const correctAnswer = findGcd(random1, random2);
 
-  return [`${random1} ${random2}`, String(gcd)];
+  return [`${random1} ${random2}`, String(correctAnswer)];
 };
 
 export default () => gameEngine(gameCondition, generateGame);
