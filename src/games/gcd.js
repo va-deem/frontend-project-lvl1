@@ -9,7 +9,7 @@ const findGcd = (a, b) => {
   return findGcd(b, a % b);
 };
 
-const initGame = () => {
+const generateGame = () => {
   const random1 = getRandomNumber(1, 20);
   const random2 = getRandomNumber(1, 20);
 
@@ -18,4 +18,4 @@ const initGame = () => {
   return [`${random1} ${random2}`, String(gcd)];
 };
 
-export default () => gameEngine(gameCondition, initGame);
+export default () => gameEngine(gameCondition, generateGame);
