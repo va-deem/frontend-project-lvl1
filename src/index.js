@@ -12,11 +12,12 @@ const gameEngine = (condition, func) => {
     const answer = readlineSync.question(`Question: ${question}\nYour answer:`);
     if (answer === correctAnswer) {
       console.log('Correct!');
-      if (attemptsNumber === 3) {
+      if (i === attemptsNumber) {
         console.log(`Congratulations, ${name}!`);
       }
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was ${correctAnswer}. \nLet's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      console.log(`Let's try again, ${name}!`);
       break;
     }
   }
