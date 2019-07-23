@@ -6,20 +6,26 @@ const generateGame = () => {
   const firstOperand = getRandomNumber(1, 10);
   const secondOperand = getRandomNumber(1, 10);
 
+  const operators = {
+    0: '-',
+    1: '+',
+    2: '*',
+  };
+  const randomOperator = operators[getRandomNumber(0, 2)];
 
-  const minus = [`${firstOperand} - ${secondOperand}`, String(firstOperand - secondOperand)];
-  const plus = [`${firstOperand} + ${secondOperand}`, String(firstOperand + secondOperand)];
-  const multiple = [`${firstOperand} * ${secondOperand}`, String(firstOperand * secondOperand)];
-  const questions = [minus, plus, multiple];
+  const operations = {
+    '-': [`${firstOperand} - ${secondOperand}`, String(firstOperand - secondOperand)],
+    '+': [`${firstOperand} + ${secondOperand}`, String(firstOperand + secondOperand)],
+    '*': [`${firstOperand} * ${secondOperand}`, String(firstOperand * secondOperand)],
+  };
 
-  const operatorChoice = getRandomNumber(0, questions.length - 1);
-  switch (operatorChoice) {
-    case 0:
-      return questions[0];
-    case 1:
-      return questions[1];
-    case 2:
-      return questions[2];
+  switch (randomOperator) {
+    case '-':
+      return operations['-'];
+    case '+':
+      return operations['+'];
+    case '*':
+      return operations['*'];
     default:
       return [];
   }
