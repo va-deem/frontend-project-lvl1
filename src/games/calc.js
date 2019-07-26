@@ -8,17 +8,22 @@ const generateGame = () => {
   const operators = ['-', '+', '*'];
   const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${firstOperand} ${randomOperator} ${secondOperand}`;
+  let result = '';
 
   switch (randomOperator) {
     case '-':
-      return [question, String(firstOperand - secondOperand)];
+      result = firstOperand - secondOperand;
+      break;
     case '+':
-      return [question, String(firstOperand + secondOperand)];
+      result = firstOperand + secondOperand;
+      break;
     case '*':
-      return [question, String(firstOperand * secondOperand)];
+      result = firstOperand * secondOperand;
+      break;
     default:
-      return [];
+      result = [];
   }
+  return [question, String(result)];
 };
 
 export default () => gameEngine(gameCondition, generateGame);
