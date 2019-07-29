@@ -1,4 +1,4 @@
-import gameEngine from '..';
+import engine from '..';
 import getRandomNumber from '../generator';
 
 const gameCondition = 'What number is missing in the progression?';
@@ -22,4 +22,4 @@ const generateGame = () => {
   return [sequence, String(missingElement)];
 };
 
-export default () => gameEngine(gameCondition, generateGame);
+export default () => engine(gameCondition, generateGame);

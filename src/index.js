@@ -1,18 +1,18 @@
 import readlineSync from 'readline-sync';
 
-const attemptsNumber = 3;
-const gameEngine = (condition, func) => {
+const attemptCount = 3;
+const engine = (gameCondition, generateGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log(condition);
+  console.log(gameCondition);
 
-  for (let i = 1; i <= attemptsNumber; i += 1) {
-    const [question, correctAnswer] = func();
+  for (let i = 1; i <= attemptCount; i += 1) {
+    const [question, correctAnswer] = generateGame();
     const answer = readlineSync.question(`Question: ${question}\nYour answer:`);
     if (answer === correctAnswer) {
       console.log('Correct!');
-      if (i === attemptsNumber) {
+      if (i === attemptCount) {
         console.log(`Congratulations, ${name}!`);
       }
     } else {
@@ -23,4 +23,4 @@ const gameEngine = (condition, func) => {
   }
 };
 
-export default gameEngine;
+export default engine;

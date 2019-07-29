@@ -1,4 +1,4 @@
-import gameEngine from '..';
+import engine from '..';
 import getRandomNumber from '../generator';
 
 const gameCondition = 'What is the result of the expression?';
@@ -26,4 +26,4 @@ const generateGame = () => {
   return [question, String(result)];
 };
 
-export default () => gameEngine(gameCondition, generateGame);
+export default () => engine(gameCondition, generateGame);

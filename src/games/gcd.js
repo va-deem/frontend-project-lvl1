@@ -1,4 +1,4 @@
-import gameEngine from '..';
+import engine from '..';
 import getRandomNumber from '../generator';
 
 const gameCondition = 'Find the greatest common divisor of given numbers.';
@@ -18,4 +18,4 @@ const generateGame = () => {
   return [`${random1} ${random2}`, String(correctAnswer)];
 };
 
-export default () => gameEngine(gameCondition, generateGame);
+export default () => engine(gameCondition, generateGame);
