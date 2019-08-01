@@ -12,10 +12,11 @@ const findGcd = (a, b) => {
 const generateRound = () => {
   const random1 = getRandomNumber(1, 20);
   const random2 = getRandomNumber(1, 20);
+  const question = `${random1} ${random2}`;
 
   const correctAnswer = findGcd(random1, random2);
 
-  return [`${random1} ${random2}`, String(correctAnswer)];
+  return [question, String(correctAnswer)];
 };
 
 export default () => engine(gameCondition, generateRound);

@@ -4,22 +4,23 @@ import getRandomNumber from '../generator';
 const gameCondition = 'What number is missing in the progression?';
 const progressionLength = 10;
 const generateRound = () => {
-  const randomStart = getRandomNumber(1, 100);
-  const randomStep = getRandomNumber(3, 7);
-  const randomElement = getRandomNumber(1, progressionLength - 1);
+  const start = getRandomNumber(1, 100);
+  const step = getRandomNumber(3, 7);
+  const hiddenElementIndex = getRandomNumber(0, progressionLength - 1);
 
-  let sequence = '';
-  let missingElement = 0;
+  let question = '';
+  let missingElement;
   for (let i = 0; i < progressionLength; i += 1) {
-    const element = randomStart + randomStep * i;
-    if (i === randomElement) {
-      sequence = `${sequence} ..`;
+    const element = start + step * i;
+    if (i === hiddenElementIndex) {
+      question += '.. ';
       missingElement = element;
     } else {
-      sequence = `${sequence} ${element}`;
+      question += `${element} `;
     }
   }
-  return [sequence, String(missingElement)];
+
+  return [question, String(missingElement)];
 };
 
 export default () => engine(gameCondition, generateRound);

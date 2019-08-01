@@ -2,10 +2,10 @@ import engine from '..';
 import getRandomNumber from '../generator';
 
 const gameCondition = 'What is the result of the expression?';
+const operators = ['-', '+', '*'];
 const generateRound = () => {
   const firstOperand = getRandomNumber(1, 10);
   const secondOperand = getRandomNumber(1, 10);
-  const operators = ['-', '+', '*'];
   const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${firstOperand} ${randomOperator} ${secondOperand}`;
   let result = '';
@@ -21,7 +21,7 @@ const generateRound = () => {
       result = firstOperand * secondOperand;
       break;
     default:
-      result = [];
+      result = null;
   }
   return [question, String(result)];
 };
