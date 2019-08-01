@@ -2,7 +2,7 @@ import engine from '..';
 import getRandomNumber from '../generator';
 
 const gameCondition = 'What is the result of the expression?';
-const generateGame = () => {
+const generateRound = () => {
   const firstOperand = getRandomNumber(1, 10);
   const secondOperand = getRandomNumber(1, 10);
   const operators = ['-', '+', '*'];
@@ -26,4 +26,4 @@ const generateGame = () => {
   return [question, String(result)];
 };
 
-export default () => engine(gameCondition, generateGame);
+export default () => engine(gameCondition, generateRound);
