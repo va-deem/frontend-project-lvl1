@@ -9,12 +9,11 @@ const generateRound = () => {
   const hiddenElementIndex = getRandomNumber(0, progressionLength - 1);
 
   let question = '';
-  let missingElement;
+  const missingElement = start + step * hiddenElementIndex;
   for (let i = 0; i < progressionLength; i += 1) {
     const element = start + step * i;
-    if (i === hiddenElementIndex) {
+    if (element === missingElement) {
       question += '.. ';
-      missingElement = element;
     } else {
       question += `${element} `;
     }
