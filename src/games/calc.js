@@ -6,11 +6,11 @@ const operators = ['-', '+', '*'];
 const generateRound = () => {
   const firstOperand = getRandomNumber(1, 10);
   const secondOperand = getRandomNumber(1, 10);
-  const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
-  const question = `${firstOperand} ${randomOperator} ${secondOperand}`;
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
+  const question = `${firstOperand} ${operator} ${secondOperand}`;
   let result = '';
 
-  switch (randomOperator) {
+  switch (operator) {
     case '-':
       result = firstOperand - secondOperand;
       break;

@@ -7,7 +7,7 @@ const isPrime = (number) => {
     return false;
   }
 
-  for (let i = 2; i < (number / 2); i += 1) {
+  for (let i = 2; i <= number / 2; i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -16,7 +16,7 @@ const isPrime = (number) => {
 };
 
 const generateRound = () => {
-  const question = getRandomNumber(2, 100);
+  const question = getRandomNumber(2, 5);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };

@@ -8,14 +8,11 @@ const findGcd = (a, b) => {
   }
   return findGcd(b, a % b);
 };
-
 const generateRound = () => {
   const random1 = getRandomNumber(1, 20);
   const random2 = getRandomNumber(1, 20);
   const question = `${random1} ${random2}`;
-
   const correctAnswer = findGcd(random1, random2);
-
   return [question, String(correctAnswer)];
 };
 
