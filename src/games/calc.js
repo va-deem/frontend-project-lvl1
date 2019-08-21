@@ -8,7 +8,7 @@ const generateRound = () => {
   const secondOperand = getRandomNumber(1, 10);
   const operator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${firstOperand} ${operator} ${secondOperand}`;
-  let result = '';
+  let result;
 
   switch (operator) {
     case '-':

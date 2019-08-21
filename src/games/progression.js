@@ -8,12 +8,12 @@ const generateRound = () => {
   const step = getRandomNumber(3, 7);
   const hiddenElementIndex = getRandomNumber(0, progressionLength - 1);
   const progression = [];
-  const missingElement = '..';
+  const missingElementMarker = '..';
   const correctAnswer = start + step * hiddenElementIndex;
   for (let i = 0; i < progressionLength; i += 1) {
     const element = start + step * i;
     if (i === hiddenElementIndex) {
-      progression.push(missingElement);
+      progression.push(missingElementMarker);
     } else {
       progression.push(element);
     }
